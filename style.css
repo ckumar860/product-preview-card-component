@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&family=Outfit:wght@400;700&family=Play:wght@700&family=Saira+Condensed:wght@100&family=Space+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    max-width: 600px;
+    /* max-height: 500px; */
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+.image_container{
+    width:50%;
+}
+.image_container img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.details-container{
+    width: 50%;
+    padding: 2rem;
+}
+
+.details-container .product_type{
+    letter-spacing: 4px;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    margin-bottom: 1.75rem;
+    font-family: "Montserrat";
+}
+
+.details-container .product_name{
+    color: hsl(212, 21%, 14%);
+    padding-right: 2rem;
+    margin-bottom: 1.75rem;
+    font-family:"fraunces";
+}
+
+.details-container .product_description{
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    line-height: 22px;
+    margin-bottom: 1.75rem;
+    font-family: "Montserrat";
+}
+
+.price-details{
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1.75rem;
+}
+
+.price-details .current-price{
+    color: hsl(158, 36%, 37%);
+    font-family:"fraunces";
+}
+
+.price-details .old-price{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat";
+}
+
+.btn{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 7px;
+    border: none;
+    gap: 10px;
+    color: white;
+    font-family: "Montserrat";
+}
+
+.btn:hover{
+    background-color: hsl(212, 21%, 14%);
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+    .container{
+        flex-direction: column;
+        margin: 1.5rem;
+    }
+    .image_container{
+        width: 100%;
+        height: 50%;
+    }
+    .image_container img{
+        content: url(images/image-product-mobile.jpg);
+        object-fit: cover;
+        border-bottom-left-radius:0rem;
+        border-top-right-radius: 10px;
+    }
+    .details-container{
+        width: 100%;
+    }
+    .details-container .product_name{
+        padding-right: 0;
+    }
+}
